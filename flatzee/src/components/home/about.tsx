@@ -1,11 +1,10 @@
 import Image from "next/image";
-import React from "react";
-import { FaPlus } from "react-icons/fa";
-import { HiLocationMarker } from "react-icons/hi";
+import { FaHospital, FaPlus } from "react-icons/fa";
+import { RiFirstAidKitFill } from "react-icons/ri";
 
 const About = () => {
   return (
-    <section className="container mx-auto px-4 py-16 flex gap-">
+    <section className="container mx-auto px-4 py-16 flex gap-32">
       <section>
         <div className="flex justify-center flex-col gap-2 max-w-[500px] xl:max-w-[600px]">
           <h3 className="text-lg sm:text-xl font-poppins font-bold bg-linear-to-l from-primary to-secondary bg-clip-text text-transparent">
@@ -28,29 +27,29 @@ const About = () => {
         <div className="flex flex-col gap-6 py-8">
           <div className="flex items-start gap-4 bg-white shadow p-6 rounded">
             <div className="bg-gray-300 inline rounded-xl p-3">
-              <HiLocationMarker />
+              <FaHospital />
             </div>
             <div>
-              <h3>Managed IT Services</h3>
+              <h3 className="text-lg font-semibold">
+                State-of-the-Art Facilities
+              </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatem a neque aliquid quidem voluptate dolorem, quasi qui
-                facilis dolor nobis error odio maiores ipsum magni optio aut
-                consequuntur obcaecati illo.
+                Nepal Mediciti Hospital features world-class infrastructure and
+                cutting-edge medical technology, providing a safe and
+                comfortable environment for our patients and families.
               </p>
             </div>
           </div>
           <div className="flex items-start gap-4 bg-white shadow p-6 rounded">
             <div className="bg-gray-300 inline rounded-xl p-3">
-              <HiLocationMarker />
+              <RiFirstAidKitFill />
             </div>
             <div>
-              <h3>Managed IT Services</h3>
+              <h3 className="text-lg font-semibold">Expert Care Team</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatem a neque aliquid quidem voluptate dolorem, quasi qui
-                facilis dolor nobis error odio maiores ipsum magni optio aut
-                consequuntur obcaecati illo.
+                Our team of highly skilled doctors, nurses, and specialists is
+                dedicated to delivering compassionate, patient-centered care
+                across a wide range of medical specialties.
               </p>
             </div>
           </div>
@@ -67,7 +66,7 @@ const About = () => {
       <section className="relative">
         <div className="relative bg-linear-to-l from-primary to-secondary h-[600px] w-[500px] rounded-tl-full flex justify-end">
           <h2 className="[writing-mode:vertical-lr] rotate-180 [text-orientation:mixed] pt-12 pl-4 text-2xl font-bold font-poppins text-white ">
-            We are a certified IT Service company.
+            Committed to Healthcare Excellence.
           </h2>
         </div>
         <div className="p-2 rounded-full bg-white inline-flex absolute -left-12 top-10">
