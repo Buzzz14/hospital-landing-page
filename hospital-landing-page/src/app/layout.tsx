@@ -18,10 +18,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Clickbyte",
-    template: "%s - Clickbyte",
+    default: "Nepal Mediciti Hospital",
+    template: "%s - Nepal Mediciti Hospital",
   },
-  description: "This is a project for Clickbyte.",
+  description: "This is a project for Nepal Mediciti Hospital.",
 };
 
 export default function RootLayout({
