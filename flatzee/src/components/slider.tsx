@@ -26,7 +26,7 @@ const Slider = ({ sliderImages, activeIndex, setActiveIndex }: SliderProps) => {
     <section className="hidden lg:block absolute top-12 xl:top-0 lg:right-4 xl:-right-12">
       {sliderImages.length > 0 && (
         <div className="flex flex-col items-center">
-          <div className="inline-flex p-2 bg-white rounded-xl w-[500px] xl:w-[650px]">
+          <div className="inline-flex p-2 bg-linear-to-l from-primary to-secondary  rounded-xl w-[500px] xl:w-[650px]">
             <div className="relative w-full h-60 md:h-90 xl:h-[500px]">
               <Image
                 src={sliderImages[activeIndex].url}

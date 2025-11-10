@@ -5,7 +5,7 @@ import { RiFirstAidKitFill } from "react-icons/ri";
 const About = () => {
   return (
     <section className="container mx-auto px-4 py-16 flex gap-32">
-      <section>
+      <aside>
         <div className="flex justify-center flex-col gap-2 max-w-[500px] xl:max-w-[600px]">
           <h3 className="text-lg sm:text-xl font-poppins font-bold bg-linear-to-l from-primary to-secondary bg-clip-text text-transparent">
             About Us
@@ -61,7 +61,7 @@ const About = () => {
         >
           Explore More <FaPlus className="text-xs" />
         </button>
-      </section>
+      </aside>
 
       <section className="relative">
         <div className="relative bg-linear-to-l from-primary to-secondary h-[600px] w-[500px] rounded-tl-full flex justify-end">
@@ -85,7 +85,7 @@ const About = () => {
         <div className="p-2 rounded-full inline-flex absolute top-0 -left-24 bg-white">
           <div className="bg-linear-to-l from-primary to-secondary rounded-full h-40 w-40 text-white font-poppins text-center flex flex-col justify-center">
             <h3 className="text-lg font-normal">Since</h3>
-            <h1 className="text-5xl font-bold">2000</h1>
+            <h1 className="text-5xl font-bold">2016</h1>
           </div>
         </div>
       </section>

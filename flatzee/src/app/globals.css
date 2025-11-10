@@ -17,6 +17,7 @@
   --color-text: var(--text);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
 
   --font-sans: var(--font-roboto);
   --font-poppins: var(--font-poppins);
