@@ -1,0 +1,74 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "name": "Emergency & Trauma Care",
+      "description": "24/7 advanced emergency and trauma services equipped with modern facilities and expert medical teams ready to respond instantly.",
+      "image": "/images/services/emergency-trauma.png"
+    },
+    {
+      "id": "2",
+      "name": "Cardiology",
+      "description": "Comprehensive heart care services including diagnostics, interventions, and cardiac surgery delivered by leading cardiologists.",
+      "image": "/images/services/cardiology.png"
+    },
+    {
+      "id": "3",
+      "name": "Neurology & Neurosurgery",
+      "description": "Specialized care for brain, spine, and nervous system disorders with cutting-edge technology and experienced neurospecialists.",
+      "image": "/images/services/neurology.png"
+    },
+    {
+      "id": "4",
+      "name": "Orthopedics & Joint Replacement",
+      "description": "Advanced orthopedic treatments and joint replacement surgeries for restoring movement, strength, and quality of life.",
+      "image": "/images/services/orthopedics.png"
+    },
+    {
+      "id": "5",
+      "name": "Maternity & Child Care",
+      "description": "Comprehensive maternity, neonatal, and pediatric services ensuring safe childbirth and specialized care for mothers and children.",
+      "image": "/images/services/maternity.png"
+    },
+    {
+      "id": "6",
+      "name": "Cancer Care (Oncology)",
+      "description": "Integrated cancer diagnosis, treatment, and recovery services powered by expert oncologists and modern radiation facilities.",
+      "image": "/images/services/oncology.png"
+    },
+    {
+      "id": "7",
+      "name": "Diagnostics & Imaging",
+      "description": "State-of-the-art laboratory and imaging services providing fast, precise, and reliable diagnostic results for every patient.",
+      "image": "/images/services/diagnostics.png"
+    },
+    {
+      "id": "8",
+      "name": "Wellness & Preventive Care",
+      "description": "Personalized health checkups, preventive screenings, and wellness programs designed to promote long-term healthy living.",
+      "image": "/images/services/wellness.png"
+    }
+  ],
+  "contact": {
+    "phone": "+977 - 01 - 421 7766",
+    "email": "info@nepalmediciti.com",
+    "location": "Nakhu, Lalitpur, Nepal"
+  },
+  "sliderImages": [
+    {
+      "id": "1",
+      "url": "https://www.nepalmediciti.com/images/slider/Trusted-Pre-Hospital-Care-and-Emergency-Facilities.svg",
+      "alt": "This is an alt text 1."
+    },
+    {
+      "id": "2",
+      "url": "https://www.nepalmediciti.com/images/slider/International-Insurance.svg",
+      "alt": "This is an alt text 2."
+    },
+    {
+      "id": "3",
+      "url": "https://www.nepalmediciti.com/images/slider/Medical-Examination-for-Australia-Japan-and-New-Zealand.jpg",
+      "alt": "This is an alt text 3."
+    }
+  ]
+}
