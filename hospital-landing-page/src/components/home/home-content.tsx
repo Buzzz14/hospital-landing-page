@@ -1,14 +1,16 @@
 import About from "./about";
+import Contact from "./contact";
 import Hero from "./hero";
 import Services from "./services";
 
 const HomeContent = () => {
   return (
-    <section>
+    <main>
       <Hero />
       <About />
       <Services />
-    </section>
+      <Contact />
+    </main>
   );
 };
 

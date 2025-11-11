@@ -17,6 +17,7 @@ const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section className="md:h-[600px] xl:h-[700px]">
+      {/* Header Section  */}
       <header className="hidden container mx-auto py-4 xl:flex justify-between items-center">
         <h3 className="text-sm font-semibold">
           Welcome to Nepal Mediciti Hospital - For Healthy and Prosperous Nation
@@ -33,10 +34,13 @@ const Hero = () => {
           </div>
         </div>
       </header>
+
+      {/* Navigation Section  */}
       <section className=" xl:container mx-auto bg-background flex items-center justify-between xl:rounded py-4 xl:py-1 px-4 shadow-lg w-full">
         <NavigationContent />
       </section>
 
+      {/* Hero Section  */}
       <section className="relative container mx-auto">
         <div className="flex flex-col lg:flex-row py-8 md:py-0">
           <div className="flex justify-between items-center pt-16 px-6 container mx-auto">

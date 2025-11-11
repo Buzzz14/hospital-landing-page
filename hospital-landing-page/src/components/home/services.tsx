@@ -48,7 +48,8 @@ const Services = () => {
   } = useServicesQuery();
 
   // Use fallback if no services data
-  const servicesToShow = (services && services.length > 0) ? services : fallbackServices;
+  const servicesToShow =
+    services && services.length > 0 ? services : fallbackServices;
 
   // const isLoading = servicesLoading;
   // const hasError = servicesError;
@@ -63,18 +64,18 @@ const Services = () => {
 
   return (
     <section className="pb-12">
-      <div className="flex justify-center flex-col items-center gap-2">
+      <section className="flex justify-center flex-col items-center gap-2">
         <h3 className="text-lg sm:text-xl font-poppins font-bold bg-linear-to-l from-primary to-secondary bg-clip-text text-transparent">
           What We Do
         </h3>
 
         <h1 className="text-3xl sm:text-4xl max-w-lg text-center font-poppins font-bold leading-12">
-          We Run all kinds of Service that your{" "}
-          <span className="text-primary">Success</span>
+          We Offer World-Class <span className="text-primary">Healthcare</span>{" "}
+          Services
         </h1>
-      </div>
+      </section>
 
-      <div className="flex gap-10 container mx-auto mt-36 pb-12">
+      <section className="flex gap-10 container mx-auto mt-36 pb-12">
         {servicesToShow.map((service) => (
           <motion.div
             key={service.id}
@@ -111,7 +112,7 @@ const Services = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </section>
 
       <button
         type="button"

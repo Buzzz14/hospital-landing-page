@@ -32,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning={true}
         className={`${roboto.variable} ${poppins.variable} antialiased max-w-[1920px] mx-auto text-text`}
       >
         <ReactQueryProvider>
