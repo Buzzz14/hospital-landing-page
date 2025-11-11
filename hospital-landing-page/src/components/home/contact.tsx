@@ -10,29 +10,27 @@ const Contact = () => {
   const { data: contact } = useContactQuery();
 
   return (
-    <section className="container mx-auto py-24 flex flex-col gap-12">
-      <section className="flex justify-center gap-8 items-center">
+    <section className="container mx-auto py-24 px-6 flex flex-col gap-12">
+      <section className="flex justify-center flex-col md:flex-row gap-8 items-center">
         <div className="flex justify-center flex-col gap-2">
           <h3 className="text-lg sm:text-xl font-poppins font-bold bg-linear-to-l from-primary to-secondary bg-clip-text text-transparent">
             Contact Us
           </h3>
 
           <h1 className="text-3xl sm:text-4xl max-w-lg text-start font-poppins font-bold leading-12">
-            Grow Your Business With{" "}
-            <span className="text-primary">Our Expertise</span>
+            Connect with <span className="text-primary">Nepal Mediciti Hospital</span>
           </h1>
         </div>
         <div>
           <p className="text-lg max-w-lg">
-            We understand the importance of approaching each work integrally and
-            believe in the power of simple.
+            For appointments, queries, and more information about our healthcare services, please reach out to our team. We are here to assist you with compassionate and quality care, every step of the way.
           </p>
         </div>
       </section>
 
-      <section className="grid justify-items-center grid-cols-6">
-        <div className="col-span-2 flex flex-col gap-8">
-          <div className="bg-gray-100 py-8 px-10 flex items-center gap-6 rounded-lg shadow-md">
+      <section className="grid grid-cols-1 lg:grid-cols-6 gap-8 justify-items-center w-full">
+        <div className="w-full col-span-1 lg:col-span-2 flex flex-col gap-8">
+          <div className="bg-gray-100 py-8 px-6 sm:px-8 flex items-center gap-6 rounded-lg shadow-md w-full">
             <FaLocationDot className="text-3xl text-secondary" />
             <div>
               <h3 className="text-xl font-bold">Main Office</h3>
@@ -46,7 +44,7 @@ const Contact = () => {
               /[^+\d]/g,
               ""
             )}`}
-            className="bg-gray-100 py-8 px-10 flex items-center gap-6 rounded-lg shadow-md cursor-pointer"
+            className="bg-gray-100 py-8 px-6 sm:px-8 flex items-center gap-6 rounded-lg shadow-md cursor-pointer w-full"
           >
             <FaPhoneAlt className="text-3xl text-secondary" />
             <div>
@@ -58,7 +56,7 @@ const Contact = () => {
           </a>
           <a
             href={`mailto:${contact?.email || "info@nepalmediciti.com"}`}
-            className="bg-gray-100 py-8 px-10 flex items-center gap-6 rounded-lg shadow-md cursor-pointer"
+            className="bg-gray-100 py-8 px-6 sm:px-8 flex items-center gap-6 rounded-lg shadow-md cursor-pointer w-full"
           >
             <IoMail className="text-3xl text-secondary" />
             <div>
@@ -70,7 +68,7 @@ const Contact = () => {
           </a>
         </div>
 
-        <div className="col-span-4 bg-gray-100 w-full flex items-center justify-center py-18 px-8 rounded-lg shadow-md">
+        <div className="w-full col-span-1 lg:col-span-4 bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-8 rounded-lg shadow-md mt-4 lg:mt-0">
           <ContactForm />
         </div>
       </section>

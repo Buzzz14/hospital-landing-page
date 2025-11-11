@@ -75,11 +75,11 @@ const Services = () => {
         </h1>
       </section>
 
-      <section className="flex gap-10 container mx-auto mt-36 pb-12">
+      <section className="flex justify-center items-center flex-wrap gap-10 container mx-auto mt-24 pb-12">
         {servicesToShow.map((service) => (
           <motion.div
             key={service.id}
-            className="relative inline-block"
+            className="relative inline-block mt-16"
             whileHover={{ y: -16 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >

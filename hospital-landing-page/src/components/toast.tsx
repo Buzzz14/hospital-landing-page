@@ -15,9 +15,9 @@ type ToastProps = {
 };
 
 const variantClasses: Record<ToastVariant, string> = {
-  success: "bg-green-600 text-white",
-  error: "bg-red-600 text-white",
-  info: "bg-gray-900 text-white",
+  success: "bg-green-800 text-white",
+  error: "bg-red-800 text-white",
+  info: "bg-gray-800 text-white",
 };
 
 const MotionToast = ({
@@ -64,7 +64,7 @@ const MotionToast = ({
               }}
               transition={{ type: "spring", stiffness: 400, damping: 30 }}
               className={[
-                "pointer-events-auto rounded-lg shadow-lg px-4 py-3 text-sm font-medium",
+                "pointer-events-auto shadow-lg px-4 py-3 text-sm font-medium",
                 "max-w-md w-full",
                 variantClasses[variant],
               ].join(" ")}
