@@ -192,7 +192,9 @@ const NavigationContent = () => {
           <h2 className="capitalize text-sm text-gray-500 font-light">
             call any time
           </h2>
-          <h1 className="font-bold font-poppins text-lg">{contact?.phone}</h1>
+          <h1 className="font-bold font-poppins text-lg">
+            {contact?.phone || "+977 - 01 - 421 7766"}
+          </h1>
         </div>
       </div>
 

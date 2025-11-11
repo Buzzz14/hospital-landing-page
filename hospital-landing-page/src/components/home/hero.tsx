@@ -25,11 +25,11 @@ const Hero = () => {
         <div className="flex gap-4 items-center text-sm font-bold">
           <div className="flex gap-2 items-center">
             <MdOutlineEmail />
-            {contact?.email}
+            {contact?.email || "info@nepalmediciti.com"}
           </div>
           <div className="flex gap-2 items-center">
             <FaMapLocationDot />
-            {contact?.location}
+            {contact?.location || "Nakhu, Lalitpur, Nepal"}
           </div>
         </div>
       </header>

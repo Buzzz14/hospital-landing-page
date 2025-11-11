@@ -3,25 +3,63 @@ import { useServicesQuery } from "@/hooks/useServicesQuery";
 import { truncate } from "@/utils/truncate";
 import Image from "next/image";
 import { FaPlus } from "react-icons/fa";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+
+const fallbackServices = [
+  {
+    id: "1",
+    name: "Emergency & Trauma Care",
+    description:
+      "24/7 advanced emergency and trauma services equipped with modern facilities and expert medical teams ready to respond instantly.",
+    image:
+      "https://www.nepalmediciti.com/images/slider/Trusted-Pre-Hospital-Care-and-Emergency-Facilities.svg",
+  },
+  {
+    id: "2",
+    name: "Cardiology",
+    description:
+      "Comprehensive heart care services including diagnostics, interventions, and cardiac surgery delivered by leading cardiologists.",
+    image:
+      "https://www.nepalmediciti.com/images/slider/Trusted-Pre-Hospital-Care-and-Emergency-Facilities.svg",
+  },
+  {
+    id: "3",
+    name: "Neurology & Neurosurgery",
+    description:
+      "Specialized care for brain, spine, and nervous system disorders with cutting-edge technology and experienced neurospecialists.",
+    image:
+      "https://www.nepalmediciti.com/images/slider/Trusted-Pre-Hospital-Care-and-Emergency-Facilities.svg",
+  },
+  {
+    id: "4",
+    name: "Orthopedics & Joint Replacement",
+    description:
+      "Advanced orthopedic treatments and joint replacement surgeries for restoring movement, strength, and quality of life.",
+    image:
+      "https://www.nepalmediciti.com/images/slider/Trusted-Pre-Hospital-Care-and-Emergency-Facilities.svg",
+  },
+];
 
 const Services = () => {
   const {
     data: services,
-    isLoading: servicesLoading,
-    isError: servicesError,
+    // isLoading: servicesLoading,
+    // isError: servicesError,
   } = useServicesQuery();
 
-  const isLoading = servicesLoading;
-  const hasError = servicesError;
+  // Use fallback if no services data
+  const servicesToShow = (services && services.length > 0) ? services : fallbackServices;
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // const isLoading = servicesLoading;
+  // const hasError = servicesError;
 
-  if (hasError) {
-    return <div>Something went wrong while fetching data.</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
+
+  // if (hasError) {
+  //   return <div>Something went wrong while fetching data.</div>;
+  // }
 
   return (
     <section className="pb-12">
@@ -37,7 +75,7 @@ const Services = () => {
       </div>
 
       <div className="flex gap-10 container mx-auto mt-36 pb-12">
-        {services?.map((service) => (
+        {servicesToShow.map((service) => (
           <motion.div
             key={service.id}
             className="relative inline-block"
@@ -48,7 +86,7 @@ const Services = () => {
               <div className="relative w-48 h-48">
                 <Image
                   src={service.image}
-                  alt="Surgeon in a Surgery"
+                  alt={service.name || "Service Image"}
                   className="rounded-full object-cover"
                   fill
                   priority

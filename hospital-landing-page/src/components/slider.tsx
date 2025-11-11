@@ -9,28 +9,48 @@ type SliderProps = {
   setActiveIndex: any;
 };
 
+const fallbackImages = [
+  {
+    id: "1",
+    url: "https://www.nepalmediciti.com/images/slider/Trusted-Pre-Hospital-Care-and-Emergency-Facilities.svg",
+    alt: "This is an alt text 1.",
+  },
+  {
+    id: "2",
+    url: "https://www.nepalmediciti.com/images/slider/International-Insurance.svg",
+    alt: "This is an alt text 2.",
+  },
+  {
+    id: "3",
+    url: "https://www.nepalmediciti.com/images/slider/Medical-Examination-for-Australia-Japan-and-New-Zealand.jpg",
+    alt: "This is an alt text 3.",
+  },
+];
+
 const Slider = ({ sliderImages, activeIndex, setActiveIndex }: SliderProps) => {
+  const imagesToShow = sliderImages && sliderImages.length > 0 ? sliderImages : fallbackImages;
+
   useEffect(() => {
-    if (sliderImages.length === 0) return;
+    if (!imagesToShow.length) return;
 
     const interval = setInterval(() => {
       setActiveIndex((prevIndex: any) =>
-        prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1
+        prevIndex === imagesToShow.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, [sliderImages.length]);
+  }, [imagesToShow.length, setActiveIndex]);
 
   return (
     <section className="hidden lg:block absolute top-12 xl:top-0 lg:right-4 xl:-right-12">
-      {sliderImages.length > 0 && (
+      {imagesToShow.length > 0 && (
         <div className="flex flex-col items-center">
           <div className="inline-flex p-2 bg-linear-to-l from-primary to-secondary  rounded-xl w-[500px] xl:w-[650px]">
             <div className="relative w-full h-60 md:h-90 xl:h-[500px]">
               <Image
-                src={sliderImages[activeIndex].url}
-                alt={sliderImages[activeIndex].alt}
+                src={imagesToShow[activeIndex].url}
+                alt={imagesToShow[activeIndex].alt}
                 className="rounded-xl object-cover"
                 fill
                 priority
@@ -40,7 +60,7 @@ const Slider = ({ sliderImages, activeIndex, setActiveIndex }: SliderProps) => {
           </div>
 
           <div className="flex justify-center gap-4 mt-4">
-            {sliderImages.map((_, idx) => (
+            {imagesToShow.map((_, idx) => (
               <button
                 key={idx}
                 aria-label={`Show slide ${idx + 1}`}
